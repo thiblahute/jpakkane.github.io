@@ -11,6 +11,7 @@
 <title>Adding arguments</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Adding-arguments.md" data-hotdoc-role="main">
-<h1 id="adding-arguments">Adding arguments</h1>
+				    <div id="page-description" data-hotdoc-source="Adding-arguments.md" data-hotdoc-role="main">
+        <h1 id="adding-arguments">Adding arguments</h1>
 <p>Often you need to specify extra compiler arguments. Meson provides two different ways to achieve this: global arguments and per-target arguments.</p>
 <h2 id="global-arguments">Global arguments</h2>
 <p>Global compiler arguments are set with the following command. As an example you could do this.</p>
@@ -177,7 +177,10 @@ $('body').removeClass('no-script');
 <pre><code class="language-meson">executable('prog', 'prog.cc', link_args : '-Wl,--linker-option')
 </code></pre>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -185,9 +188,10 @@ $('body').removeClass('no-script');
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

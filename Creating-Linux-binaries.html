@@ -11,6 +11,7 @@
 <title>Creating Linux binaries</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Creating-Linux-binaries.md" data-hotdoc-role="main">
-<h1 id="creating-linux-binaries">Creating Linux binaries</h1>
+				    <div id="page-description" data-hotdoc-source="Creating-Linux-binaries.md" data-hotdoc-role="main">
+        <h1 id="creating-linux-binaries">Creating Linux binaries</h1>
 <p>Creating Linux binaries that can be downloaded and run on any distro (like .dmg packages for OSX or .exe installers for Windows) has traditionally been difficult. This is even more tricky if you want to use modern compilers and features, which is especially desired in game development. There is still no simple turn-key solution for this problem but with a bit of setup it can be relatively straightforward.</p>
 <h2 id="installing-system-and-gcc">Installing system and GCC</h2>
 <p>First you need to do a fresh operating system install. You can use spare hardware, VirtualBox, cloud or whatever you want. Note that the distro you install must be <em>at least as old</em> as the oldest release you wish to support. Debian stable is usually a good choice, though immediately after its release you might want to use Debian oldstable or the previous Ubuntu LTS. The oldest supported version of CentOS is also a good choice.</p>
@@ -212,7 +212,10 @@ bin/myapp
 </code></pre>
 <p>And now you are done. Zip up your <code>/tmp/myapp</code> directory and you have a working binary ready for deployment. To run the program, just unzip the file and run <code>myapp.sh</code>.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -220,9 +223,10 @@ bin/myapp
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

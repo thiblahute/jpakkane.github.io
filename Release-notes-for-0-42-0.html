@@ -11,6 +11,7 @@
 <title>Release 0.42</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Release-notes-for-0.42.0.md" data-hotdoc-role="main">
-<p><strong>Preliminary, 0.42.0 has not been released yet.</strong></p>
+				    <div id="page-description" data-hotdoc-source="Release-notes-for-0.42.0.md" data-hotdoc-role="main">
+        <p><strong>Preliminary, 0.42.0 has not been released yet.</strong></p>
 <h1 id="new-features">New features</h1>
 <h2 id="distribution-tarballs-from-mercurial-repositories">Distribution tarballs from Mercurial repositories</h2>
 <p>Creating distribution tarballs can now be made out of projects based on
@@ -182,14 +182,24 @@ value in the .pc file, using the "extra_cflags" keyword:</p>
              description : 'A simple demo library.',
              extra_cflags : '-Dfoo' )
 </code></pre>
+<h2 id="base-options-accessible-via-get_option">Base options accessible via get_option()</h2>
+<p>Base options are now accessible via the get_option() function.</p>
+<pre><code class="language-meson">uses_lto = get_option('b_lto')
+</code></pre>
 <h2 id="allow-crate-type-configuration-for-rust-compiler">Allow crate type configuration for Rust compiler</h2>
 <p>Rust targets now take an optional <code>rust_crate_type</code> keyword, allowing
 you to set the crate type of the resulting artifact. Valid crate types
 are <code>dylib</code> or <code>cdylib</code> for shared libraries, and <code>rlib</code> or
 <code>staticlib</code> for static libraries. For more, see
 Rust's <a href="https://doc.rust-lang.org/reference/linkage.html">linkage reference</a>.</p>
+<h2 id="simultaneous-use-of-address-and-undefined-behavior-sanitizers">Simultaneous use of Address- and Undefined Behavior Sanitizers</h2>
+<p>Both the address- and undefined behavior sanitizers can now be used
+simultaneously by passing <code>-Db_sanitize=address,undefined</code> to Meson.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -197,9 +207,10 @@ Rust's <a href="https://doc.rust-lang.org/reference/linkage.html">linkage refere
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

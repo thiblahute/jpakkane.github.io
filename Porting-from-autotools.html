@@ -11,6 +11,7 @@
 <title>Porting from Autotools</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Porting-from-autotools.md" data-hotdoc-role="main">
-<h1 id="porting-from-autotools">Porting from Autotools</h1>
+				    <div id="page-description" data-hotdoc-source="Porting-from-autotools.md" data-hotdoc-role="main">
+        <h1 id="porting-from-autotools">Porting from Autotools</h1>
 <p>This page uses <a href="https://github.com/hughsie/appstream-glib/">AppStream-glib</a> as an example project. AppStream-Glib contains some libraries, GObject Introspection data, tests, man pages, i18n, bash-completion with optional flags to build/not build support for some things.</p>
 <p>Meson comes with a helper script <code>ac_converter</code> that you can use to convert the basic autoconf checks for your project.</p>
 <h2 id="configureac">Configure.ac</h2>
@@ -666,7 +666,10 @@ if not os.environ.get('DESTDIR'):
 	subprocess.call(['glib-compile-schemas', schemadir])
 </code></pre>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -674,9 +677,10 @@ if not os.environ.get('DESTDIR'):
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

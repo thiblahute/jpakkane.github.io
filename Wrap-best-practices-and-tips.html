@@ -11,6 +11,7 @@
 <title>Wrap best practices and tips</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Wrap-best-practices-and-tips.md" data-hotdoc-role="main">
-<h1 id="wrap-best-practices-and-tips">Wrap best practices and tips</h1>
+				    <div id="page-description" data-hotdoc-source="Wrap-best-practices-and-tips.md" data-hotdoc-role="main">
+        <h1 id="wrap-best-practices-and-tips">Wrap best practices and tips</h1>
 <p>There are several things you need to take into consideration when writing a Meson build definition for a project. This is especially true when the project will be used as a subproject. This page lists a few things to consider when writing your definitions.</p>
 <h2 id="do-not-put-configh-in-external-search-path">Do not put config.h in external search path</h2>
 <p>Many projects use a <code>config.h</code> header file that they use for configuring their project internally. These files are never installed to the system header files so there are no inclusion collisions. This is not the case with subprojects, your project tree may have an arbitrary number of configuration files, so we need to ensure they don't clash.</p>
@@ -199,7 +199,10 @@ mydep = declare_dependency(link_with : mylibrary,
 </code></pre>
 <p>Meson will ensure that the header file has been built before compiling <code>main.c</code>.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -207,9 +210,10 @@ mydep = declare_dependency(link_with : mylibrary,
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

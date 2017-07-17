@@ -11,6 +11,7 @@
 <title>Release 0.40</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Release-notes-for-0.40.0.md" data-hotdoc-role="main">
-<h1 id="new-features">New features</h1>
+				    <div id="page-description" data-hotdoc-source="Release-notes-for-0.40.0.md" data-hotdoc-role="main">
+        <h1 id="new-features">New features</h1>
 <h2 id="outputs-of-generators-can-be-used-in-custom-targets-in-the-vs-backend">Outputs of generators can be used in custom targets in the VS backend</h2>
 <p>This has been possible with the Ninja backend for a long time but now the Visual Studio backend works too.</p>
 <h2 id="compute_int-method-in-the-compiler-objects">
@@ -216,7 +216,10 @@ one = cc.get_define('__linux__') # returns '1' on Linux hosts
 <p>Meson now sets the <code>MESONINTROSPECT</code> environment variable in addition to <code>MESON_SOURCE_ROOT</code> and other variables when running scripts. It is guaranteed to point to the correct <code>mesonintrospect</code> script, which is important when running meson uninstalled from git or when your <code>PATH</code>s may not be set up correctly.</p>
 <p>Specifically, the following meson functions will set it: <code>meson.add_install_script()</code>, <code>meson.add_postconf_script()</code>, <code>run_command()</code>, <code>run_target()</code>.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -224,9 +227,10 @@ one = cc.get_define('__linux__') # returns '1' on Linux hosts
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

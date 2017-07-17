@@ -11,6 +11,7 @@
 <title>Tutorial</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Tutorial.md" data-hotdoc-role="main">
-<h1 id="tutorial">Tutorial</h1>
+				    <div id="page-description" data-hotdoc-source="Tutorial.md" data-hotdoc-role="main">
+        <h1 id="tutorial">Tutorial</h1>
 <p>This page shows from the ground up how to create a Meson build definition for a simple project. Then we expand it to use external dependencies to show how easily they can be integrated into your project.</p>
 <h2 id="the-humble-beginning">The humble beginning</h2>
 <p>Let's start with the most basic of programs, the classic hello example. First we create a file <code>main.c</code> which holds the source. It looks like this.</p>
@@ -241,7 +241,10 @@ Creating build target "demo" with 1 files.
 <p>This creates the following GUI application.</p>
 <p><img src="images/gtksample.png" alt="GTK+ sample application screenshot" id="gtk-sample-application-screenshot"></p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -249,9 +252,10 @@ Creating build target "demo" with 1 files.
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

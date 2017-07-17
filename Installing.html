@@ -11,6 +11,7 @@
 <title>Installing</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Installing.md" data-hotdoc-role="main">
-<h1 id="installing">Installing</h1>
+				    <div id="page-description" data-hotdoc-source="Installing.md" data-hotdoc-role="main">
+        <h1 id="installing">Installing</h1>
 <p>By default Meson will not install anything. Build targets can be installed by tagging them as installable in the definition.</p>
 <pre><code class="language-meson">project('install', 'c')
 shared_library('mylib', 'libfile.c', install : true)
@@ -202,7 +202,10 @@ touch "${DESTDIR}/${MESON_INSTALL_PREFIX}/mydir/file.dat"
 <pre><code class="language-console">$ DESTDIR=/path/to/staging/area ninja install
 </code></pre>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -210,9 +213,10 @@ touch "${DESTDIR}/${MESON_INSTALL_PREFIX}/mydir/file.dat"
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

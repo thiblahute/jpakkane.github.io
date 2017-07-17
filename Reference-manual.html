@@ -11,6 +11,7 @@
 <title>Reference manual</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Reference-manual.md" data-hotdoc-role="main">
-<h1 id="reference-manual">Reference manual</h1>
+				    <div id="page-description" data-hotdoc-source="Reference-manual.md" data-hotdoc-role="main">
+        <h1 id="reference-manual">Reference manual</h1>
 <h2 id="functions">Functions</h2>
 <p>The following functions are available in build files. Click on each to see the description and usage. The objects returned by them are <a href="Reference-manual.html#returned-objects">list afterwards</a>.</p>
 <h3 id="add_global_arguments">add_global_arguments()</h3>
@@ -220,6 +220,44 @@ endif
 <pre><code class="language-meson">build_target(&lt;arguments and keyword arguments&gt;, target_type : 'executable')
 </code></pre>
 <p>The object returned by <code>build_target</code> and all convenience wrappers for <code>build_target</code> such as <a href="Reference-manual.html#executable"><code>executable</code></a> and <a href="Reference-manual.html#library"><code>library</code></a> has methods that are documented in the <a href="Reference-manual.html#build-target-object">object methods section</a> below.</p>
+<h3 id="component">component()</h3>
+<p><strong>Since: 0.XX</strong></p>
+<pre><code class="language-meson">some_component = component(&lt;component_name&gt;,
+                           targets: [],
+                           dependencies: [])
+</code></pre>
+<p>Create a component object to pass in target definition so they are optionally built
+depending on user choices.</p>
+<p>The component name will generate a new command line option based on its name with tree
+options:</p>
+<ul>
+<li>
+<code>enabled</code>: The component is enabled, meson configuration fails if a dependency is missing.</li>
+<li>
+<code>disabled</code>: The component is disabled not matter what</li>
+<li>
+<code>auto</code>: The component is enabled if all dependency are resolved, and disabled otherwise.
+It is the default value.</li>
+</ul>
+<p><strong><em>Example</em></strong>:</p>
+<p>Create a component which depends on some external dependency and start building an
+executable depending on whether user activated it or not (and depending on the presence
+of the dependency):</p>
+<pre><code class="language-meson">some_dep = dependency('some-dep', required: false)
+my_component = component(&lt;component_name&gt;, dependencies: [some_dep])
+executable(some_component,
+           dependencies: [some_dep],
+           component: my_component)
+</code></pre>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li>
+<code>name</code>: (positional first argument): The name of the component.</li>
+<li>
+<code>dependency</code>: A list of <a href="Reference-manual.html#dependency-object">dependencies</a> or
+<a href="Reference-manual.html#component-object">components</a> this component depends on.</li>
+</ul>
+<p>Returns a <a href="Reference-manual.html#component-object">Component</a>.</p>
 <h3 id="configuration_data">configuration_data()</h3>
 <pre><code class="language-meson">    configuration_data_object = configuration_data()
 </code></pre>
@@ -944,6 +982,15 @@ executable('some-tool', sources,
 <code>get(varname, default_value)</code> returns the value of <code>varname</code>, if the value has not been set returns <code>default_value</code> if it is defined <em>(added 0.38.0)</em> and errors out if not</li>
 </ul>
 <p>They all take the <code>description</code> keyword that will be written in the result file. The replacement assumes a file with C syntax. If your generated file is source code in some other language, you probably don't want to add a description field because it most likely will cause a syntax error.</p>
+<h3 id="component-object">
+<code>component</code> object</h3>
+<p>This object is returned by <a href="Reference-manual.html#component"><code>component()</code></a> and is an opaque object representing it.</p>
+<ul>
+<li>
+<code>targets()</code>: Lists all the targets belonging to the component.</li>
+<li>
+<code>enabled()</code>: Whether the component is enabled or not.</li>
+</ul>
 <h3 id="custom-target-object">
 <code>custom target</code> object</h3>
 <p>This object is returned by <a href="Reference-manual.html#custom_target"><code>custom_target</code></a> and contains a target with the following methods:</p>
@@ -1027,7 +1074,10 @@ dependency</a> from the subproject.</li>
 <code>stderr()</code> the standard error produced when the binary was run</li>
 </ul>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -1035,9 +1085,10 @@ dependency</a> from the subproject.</li>
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

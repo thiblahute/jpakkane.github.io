@@ -11,6 +11,7 @@
 <title>GNOME module</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Gnome-module.md" data-hotdoc-role="main">
-<h1 id="gnome-module">GNOME module</h1>
+				    <div id="page-description" data-hotdoc-source="Gnome-module.md" data-hotdoc-role="main">
+        <h1 id="gnome-module">GNOME module</h1>
 <p>This module provides helper tools for build operations needed when building Gnome/GLib programs.</p>
 <p><strong>Note</strong>: the compilation commands here might not work properly when you change the source files. This is a bug in the respective compilers which do not expose the required dependency information. This has been reported upstream in <a href="https://bugzilla.gnome.org/show_bug.cgi?id=745754">this bug</a>. Until this is fixed you need to be careful when changing your source files.</p>
 <h2 id="usage">Usage</h2>
@@ -366,7 +366,10 @@ for installing schemas and is only useful when running the application locally f
 <h3 id="gnomegtkdoc_html_dir">gnome.gtkdoc_html_dir()</h3>
 <p>Takes as argument a module name and returns the path where that module's HTML files will be installed. Usually used with <code>install_data</code> to install extra files, such as images, to the output directory.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -374,9 +377,10 @@ for installing schemas and is only useful when running the application locally f
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

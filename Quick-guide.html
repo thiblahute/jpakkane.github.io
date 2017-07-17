@@ -11,6 +11,7 @@
 <title>Quick guide</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Quick-guide.md" data-hotdoc-role="main">
-<h1 id="using-meson">Using Meson</h1>
+				    <div id="page-description" data-hotdoc-source="Quick-guide.md" data-hotdoc-role="main">
+        <h1 id="using-meson">Using Meson</h1>
 <p>Meson has been designed to be as easy to use as possible. This page outlines the basic use cases. For more advanced cases refer to Meson's command line help which is accessible with the command <code>meson --help</code>.</p>
 <h2 id="requirements">Requirements</h2>
 <p>Meson has two main dependencies.</p>
@@ -198,7 +198,10 @@ $ DESTDIR=/path/to/staging/root ninja -C builddir install
 <p>This is very similar to other build systems. The only difference is that the <code>DESTDIR</code> variable is passed as an environment variable rather than as an argument to <code>ninja install</code>.</p>
 <p>As distro builds happen always from scratch, we recommend you to enable <a href="Unity-builds.html">unity builds</a> whenever possible on your packages because they are faster and produce better code.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -206,9 +209,10 @@ $ DESTDIR=/path/to/staging/root ninja -C builddir install
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

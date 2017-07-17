@@ -11,6 +11,7 @@
 <title>Release 0.37</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Release-notes-for-0.37.0.md" data-hotdoc-role="main">
-<h1 id="new-features">New features</h1>
+				    <div id="page-description" data-hotdoc-source="Release-notes-for-0.37.0.md" data-hotdoc-role="main">
+        <h1 id="new-features">New features</h1>
 <h2 id="mesontest">Mesontest</h2>
 <p>Mesontest is a new testing tool that allows you to run your tests in many different ways. As an example you can run tests multiple times:</p>
 <pre><code>mesontest --repeat=1000 a_test
@@ -263,7 +263,10 @@ endif
 <h2 id="more-install-directories">More install directories</h2>
 <p>Added new options <code>sbindir</code> and <code>infodir</code> that can be used for installation.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -271,9 +274,10 @@ endif
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

@@ -11,6 +11,7 @@
 <title>FAQ</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="FAQ.md" data-hotdoc-role="main">
-<h1 id="meson-frequently-asked-questions">Meson Frequently Asked Questions</h1>
+				    <div id="page-description" data-hotdoc-source="FAQ.md" data-hotdoc-role="main">
+        <h1 id="meson-frequently-asked-questions">Meson Frequently Asked Questions</h1>
 <p>See also <a href="howtox.html">How do I do X in Meson</a>.</p>
 <h2 id="why-is-it-called-meson">Why is it called Meson?</h2>
 <p>When the name was originally chosen, there were two main limitations: there must not exist either a Debian package or a Sourceforge project of the given name. This ruled out tens of potential project names. At some point the name Gluon was considered. Gluons are elementary particles that hold protons and neutrons together, much like a build system's job is to take pieces of source code and a compiler and bind them to a complete whole.</p>
@@ -242,7 +242,10 @@ subdir('tests') # test binaries would link against the library here
 <p>The second requirement is that there needs to be an explicit subproject invocation in your <code>meson.build</code> files. Either <code>subproject('foobar')</code> or <code>dependency('foobar', fallback : ['foobar', 'foo_dep'])</code>. If these declarations either are not in any build file or they are not called (due to e.g. <code>if/else</code>) then nothing is downloaded.</p>
 <p>If this is not sufficient for you, starting from release 0.40.0 Meson has a option called <code>wrap-mode</code>, which can be used to disable wrap downloads altogether.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -250,9 +253,10 @@ subdir('tests') # test binaries would link against the library here
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

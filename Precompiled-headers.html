@@ -11,6 +11,7 @@
 <title>Precompiled headers</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Precompiled-headers.md" data-hotdoc-role="main">
-<h1 id="precompiled-headers">Precompiled headers</h1>
+				    <div id="page-description" data-hotdoc-source="Precompiled-headers.md" data-hotdoc-role="main">
+        <h1 id="precompiled-headers">Precompiled headers</h1>
 <p>Parsing header files of system libraries is surprisingly expensive. A typical source file has less than one thousand lines of code. In contrast the headers of large libraries can be tens of thousands of lines. This is especially problematic with C++, where header-only libraries are common and they may contain extremely complex code. This makes them slow to compile.</p>
 <p>Precompiled headers are a tool to mitigate this issue. Basically what they do is parse the headers and then serialize the compiler's internal state to disk. The downside of precompiled headers is that they are tricky to set up. Meson has native support for precompiled headers, but using them takes a little work.</p>
 <p>A precompiled header file is relatively simple. It is a header file that contains <code>#include</code> directives for the system headers to precompile. Here is a C++ example.</p>
@@ -201,7 +201,10 @@ order) and working around compiler bugs.</p>
 <p>This form will work with both GCC and msvc, because Meson knows that GCC does not need a <code>.cpp</code> file and thus just ignores it.</p>
 <p>It should be noted that due to implementation details of the MSVC compiler, having precompiled headers for multiple languages in the same target is not guaranteed to work.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -209,9 +212,10 @@ order) and working around compiler bugs.</p>
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

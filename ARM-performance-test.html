@@ -11,6 +11,7 @@
 <title>Arm performance test</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="ARM-performance-test.md" data-hotdoc-role="main">
-<h1 id="arm-performance-test">Arm performance test</h1>
+				    <div id="page-description" data-hotdoc-source="ARM-performance-test.md" data-hotdoc-role="main">
+        <h1 id="arm-performance-test">Arm performance test</h1>
 <p>Performance differences in build systems become more apparent on slower platforms. To examine this difference we compared the performance of Meson with GNU Autotools. We took the GLib software project and rewrote its build setup with Meson. GLib was chosen because it is a relatively large C code base which requires lots of low level configuration.</p>
 <p>The Meson version of the build system is not fully equivalent to the original Autotools one. It does not do all the same configuration steps and does not build all the same targets. The biggest missing piece being internationalisation support with Gettext. However it does configure the system enough to build all C source and run all unit tests.</p>
 <p>All measurements were done on a Nexus 4 smart phone running the latest Ubuntu touch image (updated on September 9th 2013).</p>
@@ -178,7 +178,10 @@ $('body').removeClass('no-script');
 <h2 id="conclusions">Conclusions</h2>
 <p>One of the main drawbacks of C and C++ compared to languages such as Java are long compilation times. However at least some of the blame can be found in the build tools used rather than the languages themselves or their compilers. Choosing proper tools can bring C and C++ compilation very close to instantaneous rebuilds. This has a direct impact on programmer productivity.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -186,9 +189,10 @@ $('body').removeClass('no-script');
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

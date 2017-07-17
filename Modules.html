@@ -11,6 +11,7 @@
 <title>Modules</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Modules.md" data-hotdoc-role="main">
-<h1 id="modules">Modules</h1>
+				    <div id="page-description" data-hotdoc-source="Modules.md" data-hotdoc-role="main">
+        <h1 id="modules">Modules</h1>
 <p>In addition to core language features, Meson also provides a module system aimed at providing helper methods for common build operations. Using modules is simple, first you import them:</p>
 <pre><code class="language-meson">mymod = import('somemodule')
 </code></pre>
@@ -171,11 +171,14 @@ use. Modules can be thought of like the standard library of a
 programming language. Currently Meson provides the modules listed on
 subpages.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		<div id="subpages">
-	<h4>Subpages</h4>
+	<span><b>Subpages</b></span>
 	<div class="container-fluid">
 		<div class="row">
 						<div class="col-sm-12 col-md-4">
@@ -233,9 +236,10 @@ subpages.</p>
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

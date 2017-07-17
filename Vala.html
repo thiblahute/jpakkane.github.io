@@ -11,6 +11,7 @@
 <title>Vala</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Vala.md" data-hotdoc-role="main">
-<h1 id="compiling-vala-applications">Compiling Vala applications</h1>
+				    <div id="page-description" data-hotdoc-source="Vala.md" data-hotdoc-role="main">
+        <h1 id="compiling-vala-applications">Compiling Vala applications</h1>
 <p>Meson has support for compiling Vala and Genie programs. A skeleton <code>meson.build</code> file for Vala looks like this:</p>
 <pre><code class="language-meson">project('valaprog', 'vala', 'c')
 
@@ -225,7 +225,10 @@ custom_target('foo typelib', command: [g_ir_compiler, '--output', '@OUTPUT@', '@
               install_dir: join_paths(get_option('libdir'), 'girepository-1.0'))
 </code></pre>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -233,9 +236,10 @@ custom_target('foo typelib', command: [g_ir_compiler, '--output', '@OUTPUT@', '@
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

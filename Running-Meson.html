@@ -11,6 +11,7 @@
 <title>Running meson</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Running-Meson.md" data-hotdoc-role="main">
-<h1 id="running-meson">Running meson</h1>
+				    <div id="page-description" data-hotdoc-source="Running-Meson.md" data-hotdoc-role="main">
+        <h1 id="running-meson">Running meson</h1>
 <p>There are two different ways of invoking Meson. First, you can run it directly from the source tree with the command <code>/path/to/source/meson.py</code>. Meson may also be installed in which case the command is simply <code>meson</code>. In this manual we only use the latter format for simplicity.</p>
 <p>At the time of writing only a command line version of Meson is available. This means that Meson must be invoked using the terminal. If you wish to use the MSVC compiler, you need to run Meson under "Visual Studio command prompt".</p>
 <h1 id="configuring-the-source">Configuring the source</h1>
@@ -238,7 +238,10 @@ CC=clang CXX=clang++ meson ..
 <pre><code>meson --help
 </code></pre>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -246,9 +249,10 @@ CC=clang CXX=clang++ meson ..
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

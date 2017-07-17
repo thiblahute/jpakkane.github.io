@@ -11,6 +11,7 @@
 <title>Release procedure</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Release-procedure.md" data-hotdoc-role="main">
-<h1 id="release-procedure">Release procedure</h1>
+				    <div id="page-description" data-hotdoc-source="Release-procedure.md" data-hotdoc-role="main">
+        <h1 id="release-procedure">Release procedure</h1>
 <p><strong>This page is WIP. The following procedure is not yet approved for use</strong></p>
 <h1 id="trunk">Trunk</h1>
 <p>Meson operates under the principle that trunk should (in theory) be always good enough for release. That is, all code merged in trunk must pass all unit tests. Any broken code should either be fixed or reverted immediately.</p>
@@ -192,7 +192,10 @@ $('body').removeClass('no-script');
 <p>The latest release has a regression where trying to do Foo using Bar breaks. This breaks all projects that use both, which includes at least [list of affected projects]. This causes problems for X amount of people and because of this we should do a bugfix release.</p>
 </blockquote>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -200,9 +203,10 @@ $('body').removeClass('no-script');
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

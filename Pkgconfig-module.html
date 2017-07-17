@@ -11,6 +11,7 @@
 <title>Pkgconfig module</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Pkgconfig-module.md" data-hotdoc-role="main">
-<h1 id="pkgconfig-module">Pkgconfig module</h1>
+				    <div id="page-description" data-hotdoc-source="Pkgconfig-module.md" data-hotdoc-role="main">
+        <h1 id="pkgconfig-module">Pkgconfig module</h1>
 <p>This module is a simple generator for <a href="https://pkg-config.freedesktop.org/">pkg-config</a> files.</p>
 <h2 id="usage">Usage</h2>
 <p>To use this module, just do: <strong><code>pkg = import('pkgconfig')</code></strong>. The following function will then be available as <code>pkg.generate()</code>. You can, of course, replace the name <code>pkg</code> with anything else.</p>
@@ -195,7 +195,10 @@ $('body').removeClass('no-script');
 <code>variables</code> a list of strings with custom variables to add to the generated file. The strings must be in the form <code>name=value</code> and may reference other pkgconfig variables, e.g. <code>datadir=${prefix}/share</code>. The names <code>prefix</code>, <code>libdir</code> and <code>installdir</code> are reserved and may not be used.</li>
 </ul>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -203,9 +206,10 @@ $('body').removeClass('no-script');
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

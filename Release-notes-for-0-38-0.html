@@ -11,6 +11,7 @@
 <title>Release 0.38</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Release-notes-for-0.38.0.md" data-hotdoc-role="main">
-<h1 id="uninstall-target">Uninstall target</h1>
+				    <div id="page-description" data-hotdoc-source="Release-notes-for-0.38.0.md" data-hotdoc-role="main">
+        <h1 id="uninstall-target">Uninstall target</h1>
 <p>Meson allows you to uninstall an install step by invoking the uninstall target. This will remove all files installed as part of install. Note that this does not restore the original files. This also does not undo changes done by custom install scripts (because they can do arbitrary install operations).</p>
 <h1 id="support-for-arbitrary-test-setups">Support for arbitrary test setups</h1>
 <p>Sometimes you need to run unit tests with special settings. For example under Valgrind. Usually this requires extra command line options for the tool. This is supported with the new <em>test setup</em> feature. For example to set up a test run with Valgrind, you'd write this in a <code>meson.build</code> file:</p>
@@ -211,7 +211,10 @@ array.get(4, 0) # this will return `0`
 <h1 id="silent-mode-for-mesontest">Silent mode for Mesontest</h1>
 <p>The Meson test executor got a new argument <code>-q</code> (and <code>--quiet</code>) that suppresses all output of successful tests. This makes interactive usage nicer because only errors are printed.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -219,9 +222,10 @@ array.get(4, 0) # this will return `0`
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">

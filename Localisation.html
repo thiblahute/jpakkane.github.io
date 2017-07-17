@@ -11,6 +11,7 @@
 <title>Localisation</title>
 
 <link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
 <link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
 
@@ -152,14 +153,13 @@ $('body').removeClass('no-script');
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
 	<script src="assets/js/navigation.js"></script>
-	<script src="assets/js/sitemap.js"></script>
-</div>
+			<script src="assets/js/sitemap.js"></script>
+	</div>
 
 <div id="body">
 	<div id="main">
-				
-<div id="page-description" data-hotdoc-source="Localisation.md" data-hotdoc-role="main">
-<h1 id="localisation">Localisation</h1>
+				    <div id="page-description" data-hotdoc-source="Localisation.md" data-hotdoc-role="main">
+        <h1 id="localisation">Localisation</h1>
 <p>Localising your application with GNU gettext takes a little effort but is quite straightforward. This documentation assumes that you have a <code>po</code> subdirectory at your project root directory that contains all the localisation info.</p>
 <p>The first thing you need is a file called <code>POTFILES</code>. It lists all the source files that gettext should scan in order to find strings to translate. The syntax of the file is one line per source file and the line must contain the relative path from source root. A sample POTFILES might look like this.</p>
 <pre><code>src/file1.c
@@ -182,7 +182,10 @@ i18n.gettext('intltest', languages : langs)
 <p>If the pot file does not yet exist, it will be created. It is recommended to inspect it manually afterwards and fill in e.g. proper copyright and contact information.</p>
 <p>Meson does not currently have built in commands for generating po files from the pot file. This is because translations are usually done by people who are not developers and thus have their own workflows.</p>
 
-</div>
+    </div>
+        
+
+
 
 
 		
@@ -190,9 +193,10 @@ i18n.gettext('intltest', languages : langs)
 	<div id="search_results">
 		<p>The results of the search are</p>
 	</div>
+	<hr>
 	<div id="footer">
-		
-
+		    
+        
 <hr>
 
 <div class="license-description">
