@@ -1,1 +1,1 @@
-urls_downloaded_cb({"token": "query", "urls": ["Build-options.html#build-options", "Using-wraptool.html#simple-querying", "Reference-manual.html#meson-object", "Reference-manual.html#compiler-object", "Release-notes-for-0-38-0.html#page-description"]});
+urls_downloaded_cb({"token": "query", "urls": ["Build-options.html#build-options", "Simd-module.html#usage", "Using-wraptool.html#simple-querying", "Reference-manual.html#meson-object", "Release-notes-for-0-38-0.html#page-description", "Reference-manual.html#compiler-object"]});

@@ -1,1 +1,1 @@
-urls_downloaded_cb({"token": "bar", "urls": ["External-commands.html#external-commands", "Reference-manual.html#install_subdir", "Reference-manual.html#join_paths", "Reference-manual.html#set_variable", "Release-procedure.html#requesting-a-bug-fix-release"]});
+urls_downloaded_cb({"token": "bar", "urls": ["External-commands.html#external-commands", "Reference-manual.html#install_subdir", "Reference-manual.html#join_paths", "Reference-manual.html#set_variable", "Release-notes-for-0-42-0.html#page-description", "Release-procedure.html#requesting-a-bug-fix-release"]});
